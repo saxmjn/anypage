@@ -7,7 +7,6 @@
     <a href="https://anypage.xyz/product"><strong>Learn more »</strong></a>
     <br />
     <br />
-    ·
     <a href="https://anypage.xyz">Website</a>
     ·
     <a href="https://anypage.xyz/roadmap">Roadmap</a>
