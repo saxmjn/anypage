@@ -13,7 +13,10 @@ import {
     User,
     UserPlus,
     Users,
-    GripVertical
+    GripVertical,
+    Play,
+    SquareArrowUpRight,
+    Eclipse
   } from "lucide-react"
   
   import { Button } from "@/components/ui/button"
@@ -31,9 +34,19 @@ import {
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+
+  import {
+    Dialog,
+    DialogTrigger
+  } from "@/components/ui/dialog"
+
+
+import { NativePageShare } from "./nativePageShare"
+
   
   export function NativePageControl({children}: any) {
     return (
+      <Dialog>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="pr-2 pl-2 pt-1 pb-1">{children}</Button>
@@ -41,14 +54,26 @@ import {
         <DropdownMenuContent className="w-56">
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <User className="mr-2 h-4 w-4" />
-              <span>Profile</span>
-              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+              <Play className="mr-2 h-4 w-4" />
+              <span>Preview</span>
+              <DropdownMenuShortcut>⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
+              <SquareArrowUpRight className="mr-2 h-4 w-4"/>
+              <DialogTrigger asChild>
+              <span>Share</span>
+              </DialogTrigger>
+              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+            </DropdownMenuItem>
+            {/* <DropdownMenuItem>
               <CreditCard className="mr-2 h-4 w-4" />
               <span>Billing</span>
               <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+            </DropdownMenuItem> */}
+            <DropdownMenuItem>
+              <Eclipse className="mr-2 h-4 w-4" />
+              <span>Theming</span>
+              <DropdownMenuShortcut>⌘T</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Settings className="mr-2 h-4 w-4" />
@@ -61,7 +86,7 @@ import {
               <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuGroup>
-          <DropdownMenuSeparator />
+          {/* <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <Users className="mr-2 h-4 w-4" />
@@ -90,9 +115,11 @@ import {
                 </DropdownMenuSubContent>
               </DropdownMenuPortal>
             </DropdownMenuSub>
-          </DropdownMenuGroup>
+          </DropdownMenuGroup> */}
         </DropdownMenuContent>
       </DropdownMenu>
+      <NativePageShare />
+      </Dialog>
     )
   }
   

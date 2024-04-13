@@ -45,8 +45,8 @@ export default function Home() {
                 <Row style={{width: '100%'}}>
                   {item?.loadComponent()}
                 </Row>
-                <Row style={{width: '20%'}} className={'cursor-pointer'}>
-                  {item?.value != 'title' && <p className="text-sm text-muted-foreground m-2">
+                <Row style={{width: '20%'}} className={'cursor-pointer'} >
+                  {(item?.value != 'title' && hookWidgets?.widgets[index-1]?.value!='title') && <p className="text-sm text-muted-foreground m-2" onClick={() => {hookWidgets?.addTitle(index)}}>
                   Add Title{" "}
                   <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
                     <span className="text-xs">⌥</span>T

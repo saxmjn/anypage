@@ -23,13 +23,17 @@ import {
     ChevronDown,
     MessageCircleWarning,
     ToggleLeft,
-    SquareCheck
+    SquareCheck,
+    GitCommitHorizontal,
+    Star
   } from "lucide-react";
 import { WidgetRadioSelect } from "@/components/widgets/widgetRadioSelect";
 import { WidgetSelect } from "@/components/widgets/widgetSelect";
 import { WidgetSwitch } from "@/components/widgets/widgetSwitch";
 import { WidgetCheck } from "@/components/widgets/widgetCheck";
 import { WidgetTitle } from "@/components/widgets/widgetTitle";
+import { WidgetSlider } from "@/components/widgets/widgetSlider";
+import { WidgetRating } from "@/components/widgets/widgetRating";
 
 
 export const dataWidgets: any = {
@@ -40,6 +44,10 @@ export const dataWidgets: any = {
         image: '',
         data: {
             required: false,
+            bold: false,
+            italic: false,
+            underline: false,
+            typo: 'p',
         },
         loadComponent: () => {
             return (
@@ -116,6 +124,40 @@ export const dataWidgets: any = {
         },
         loadIcon: () => {
             return (<Text className="mr-2 h-4 w-4" />)
+        }
+    },
+    'rating': {
+        title: 'Rating',
+        value: 'rating',
+        decription: '',
+        image: '',
+        data: {
+            required: false,
+        },
+        loadComponent: () => {
+            return (
+                <WidgetRating/>
+            )
+        },
+        loadIcon: () => {
+            return (<Star className="mr-2 h-4 w-4" />)
+        }
+    },
+    'slider': {
+        title: 'Slider',
+        value: 'slider',
+        decription: '',
+        image: '',
+        data: {
+            required: false,
+        },
+        loadComponent: () => {
+            return (
+                <WidgetSlider/>
+            )
+        },
+        loadIcon: () => {
+            return (<GitCommitHorizontal className="mr-2 h-4 w-4" />)
         }
     },
     'switch': {

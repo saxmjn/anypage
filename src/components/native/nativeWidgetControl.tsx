@@ -42,12 +42,12 @@ import { Row } from "../grid/row"
             <DropdownMenuItem onClick={() => {hookWidgets?.removeWidget(indexOfWidget)}}>
               <Delete className="mr-2 h-4 w-4" />
               <span>Delete</span>
-              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+              <DropdownMenuShortcut>⌘Del</DropdownMenuShortcut>
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => {hookWidgets?.duplicateWidget(indexOfWidget)}}>
               <Copy className="mr-2 h-4 w-4" />
               <span>Duplicate</span>
-              <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+              <DropdownMenuShortcut>⌘D</DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>

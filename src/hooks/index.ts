@@ -1,5 +1,6 @@
 'use client'
 
+import { dataWidgets } from "@/data/index";
 import { useState } from "react";
 
 const useWidgets = () => {
@@ -36,6 +37,18 @@ const useWidgets = () => {
         updateWidget(newData, indexOfWidget);
     }
 
+    const duplicateWidget = (indexOfWidget: any) => {
+        const newWidget = dataWidgets[widgets[indexOfWidget]?.value];
+        const newData =  [...widgets, newWidget];
+        setWidgets(newData);
+    }
+
+    const addTitle = (indexOfWidget: any) => {
+        const titleWidget = dataWidgets['title'];
+        const newData = [...widgets?.slice(0, indexOfWidget), titleWidget, ...widgets?.slice(indexOfWidget)];
+        setWidgets(newData);
+    }
+
     const saveToDb = () => {
         
     }
@@ -45,7 +58,9 @@ const useWidgets = () => {
         saveToDb,
         addWidget,
         removeWidget,
-        toggleRequiredWidget
+        toggleRequiredWidget,
+        addTitle,
+        duplicateWidget
     }
 }
 
