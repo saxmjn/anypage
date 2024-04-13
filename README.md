@@ -8,9 +8,9 @@
     <br />
     <br />
     ·
-    <a href="https://anypage.com">Website</a>
+    <a href="https://anypage.xyz">Website</a>
     ·
-    <a href="https://cal.com/roadmap">Roadmap</a>
+    <a href="https://anypage.xyz/roadmap">Roadmap</a>
   </p>
 </p>
 
