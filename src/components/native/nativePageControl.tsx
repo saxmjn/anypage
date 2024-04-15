@@ -46,7 +46,12 @@ import { NativePageShare } from "./nativePageShare"
   
   export function NativePageControl({children}: any) {
     return (
-      <Dialog>
+      <Dialog style={{
+        width: '100vw',
+        maxWidth: '100vw',
+        height: "100vh",
+        maxHeight: '100vh',
+        border: '0'}}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="pr-2 pl-2 pt-1 pb-1">{children}</Button>

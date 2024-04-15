@@ -7,6 +7,9 @@ import { Col } from "@/components/grid/col";
 import { Icon } from "@/components/ui/icon";
 import { NativeWidgetControl } from "@/components/native/nativeWidgetControl";
 import { NativePageControl } from "@/components/native/nativePageControl";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { NativePagePreview } from "@/components/native/nativePagePreview";
+import { Button } from "@/components/ui/button";
 
 
 export default function Home() {
@@ -22,8 +25,16 @@ export default function Home() {
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
               Anypage
             </h4>
-            <Row style={{width: '20%'}}>
+            <Row style={{width: '40%', hrAlign: 'end'}}>
               <NativeWidgetCommand hookWidgets={hookWidgets}/>
+              <div className="m-2">
+                <Dialog >
+                  <DialogTrigger>
+                    <Button variant="outline">Preview</Button>
+                  </DialogTrigger>
+                  <NativePagePreview hookWidgets={hookWidgets} />
+                </Dialog>
+              </div>
               <NativePageControl><Menu className="h-4 w-4"/></NativePageControl>
             </Row>
           </Row>

@@ -18,10 +18,11 @@ var styles = {
     },
 }
 
-export const WidgetTitle = () => {
+export const WidgetTitle = ({editing = true}: any) => {
     return (
         <>
-            <HoverCard style={{width: '100%'}}>
+            {editing && <>
+                <HoverCard style={{width: '100%'}}>
             <HoverCardTrigger style={{width: '100%'}}>
                 <input style={styles.base} autofocus/>
             </HoverCardTrigger>
@@ -57,7 +58,12 @@ export const WidgetTitle = () => {
                 </ToggleGroup>
             </HoverCardContent>
             </HoverCard>
-            
+            </>}
+            {!editing && <>
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                    The Joke Tax Chronicles
+                </h1>
+            </>}
         </>
     )
 }

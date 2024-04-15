@@ -49,9 +49,9 @@ export const dataWidgets: any = {
             underline: false,
             typo: 'p',
         },
-        loadComponent: () => {
+        loadComponent: (editing = true) => {
             return (
-                <><WidgetTitle/></>
+                <><WidgetTitle editing={editing}/></>
             )
         },
         loadIcon: () => {
