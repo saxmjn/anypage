@@ -12,7 +12,7 @@
     <a href="https://anypage.xyz/roadmap">Roadmap</a>
   </p>
   <p align="center">
-    ![anypage](https://github.com/saxmjn/anypage/assets/7963515/ae924793-9af3-41a7-8fc8-9b3074f1b707)
+    <img src="https://github.com/saxmjn/anypage/assets/7963515/ae924793-9af3-41a7-8fc8-9b3074f1b707" />
   </p>
 
 </p>
