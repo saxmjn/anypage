@@ -12,7 +12,8 @@
     <a href="https://anypage.xyz/roadmap">Roadmap</a>
   </p>
   <p align="center">
-    <img width="1512" alt="Screenshot 2024-04-13 at 11 16 06 AM" src="https://github.com/saxmjn/anypage/assets/7963515/e48ca6ff-a95b-4ad0-9355-88ef233b2cdb">
+    ![anypage](https://github.com/saxmjn/anypage/assets/7963515/ae924793-9af3-41a7-8fc8-9b3074f1b707)
   </p>
+
 </p>
 
